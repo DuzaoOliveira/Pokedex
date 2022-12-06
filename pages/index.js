@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
-import styles from '../styles/Home.module.css'
 import Modal from '../components/Modal';
 import Head from 'next/head';
+import styles from 'styled-components'
+import * as S from '../styles/styled'
+import { InputI } from './../styles/styled';
 
 function Home() {
   const [resposta, setResposta] = useState('');
@@ -18,11 +20,11 @@ function Home() {
   }
 
   return (
-    <div className={styles.cont}>
+    <S.Container>
 
       <Head>
         <title>Pokémon</title>
-        <meta name="description" content="Harry Potter" />
+        <meta name="description" content="Pokémon" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -47,29 +49,20 @@ function Home() {
       {Object.values(resposta).map((item) => {
         <p>{item?.name}</p>;
       })}
-      <div className={styles.mob}>
-        <div className={styles.button}>
-          <input onChange={(e) => setName(e.target.value)} value={name} />
-          <button onClick={() => pokemonGo(name)}>Buscar</button>
-        </div>
 
-        <div className={styles.card}>
-          <div className={styles.logo}>
-            <img
-              src='https://tm.ibxk.com.br/2019/09/30/30091641838086.jpg?ims=1120x420'
-              alt="logo pokemon"
-            />
-          </div>
+      <S.InputButt>
+        <S.InputI onChange={(e) => setName(e.target.value)} value={name} placeholder='Digite aqui seu Pekémon' />
 
-          <div className={styles.enter}>
-            <button className={styles.poke} onClick={() => window.location.href = "/pokemon"}>
-              All Pokemons
-            </button>
-          </div>
-        </div>
-      </div>
+        <S.BotaoB onClick={() => pokemonGo(name)}>
+          Buscar
+        </S.BotaoB>
+      </S.InputButt>
 
-    </div>
+      <S.All onClick={() => window.location.href = "/pokemon"}>
+        All Pokemons
+      </S.All>
+
+    </S.Container>
   );
 
 }
