@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import Modal from '../components/Modal';
 import Head from 'next/head';
-import styles from 'styled-components'
 import * as S from '../styles/styled'
-import { InputI } from './../styles/styled';
+
 
 function Home() {
   const [resposta, setResposta] = useState('');
@@ -51,16 +50,19 @@ function Home() {
       })}
 
       <S.InputButt>
-        <S.InputI onChange={(e) => setName(e.target.value)} value={name} placeholder='Digite aqui seu Pekémon' />
+        <S.InputI onChange={(e) => setName(e.target.value)} value={name} placeholder='Digite aqui seu Pokémon' />
 
         <S.BotaoB onClick={() => pokemonGo(name)}>
           Buscar
         </S.BotaoB>
+
+        <S.All onClick={() => window.location.href = "/pokemon"}>
+          All Pokemons
+        </S.All>
+
       </S.InputButt>
 
-      <S.All onClick={() => window.location.href = "/pokemon"}>
-        All Pokemons
-      </S.All>
+
 
     </S.Container>
   );

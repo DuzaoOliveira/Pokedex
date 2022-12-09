@@ -9,6 +9,11 @@ export const GlobalStyle = createGlobalStyle`
  }
 
  body {
+  max-width: 1920px;
+  min-width: 960px;
+  margin: 0 auto;
+  width: 100%;
   font-style: oblique;
+  background:#d30603;
  }
 `

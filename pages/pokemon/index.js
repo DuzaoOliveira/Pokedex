@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import styles from './styles.module.css';
 import Modal from "../../components/Modal";
+import * as S from './styles'
 
 function Pokemons() {
     const [resposta, setResposta] = useState();
@@ -32,35 +32,38 @@ function Pokemons() {
     };
 
     return (
-        <div className={styles.cont}>
-            <div className={styles.lista}>
-                <h1>Lista de Pokemons</h1>
-            </div>
+        <S.Container>
 
-            <div className={styles.voltar}>
-                <button onClick={handleClick}>
-                    Voltar
-                </button>
-            </div>
+            <S.Lista>
+                <h1>Lista de Pokémons</h1>
+            </S.Lista>
 
-            <div className={styles.cards}>
-                <>
-                    {resposta?.results.map((pokemons, index, name) => {
-                        return (
-                            <div className={styles.card} onClick={() => escolherPokemon(pokemons.name)}>
+            <S.Voltar onClick={handleClick} >
+                <img src="https://imagensemoldes.com.br/wp-content/uploads/2020/04/Pokebola-Pok%C3%A9mon-PNG-1024x1022.png" width={'50px'} height={'50px'}></img>
+            </S.Voltar>
 
-                                <div className={styles.nomes}>
-                                    <p>{pokemons.name}</p>
-                                </div>
 
-                                <div className={styles.api}>
-                                    <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${index + 1}.png`} />
-                                </div>
-                            </div>
-                        );
-                    })}
-                </>
-            </div>
+            <S.Card>
+                {resposta?.results.map((pokemons, index, name) => {
+                    return (
+                        // eslint-disable-next-line react/jsx-key
+                        <div onClick={() => escolherPokemon(pokemons.name)}>
+
+                            <>
+                                <S.ImagemNomes>
+                                    <S.Nomes>{pokemons.name}</S.Nomes>
+                                    <S.Img>
+                                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${index + 1}.png`} width={'300px'} height={'350px'} />
+                                    </S.Img>
+                                </S.ImagemNomes>
+                            </>
+
+
+                        </div>
+                    );
+                })}
+            </S.Card>
+
 
             {valores &&
                 <Modal
@@ -79,7 +82,7 @@ function Pokemons() {
                     isOpen={openModal}
                 />
             }
-        </div>
+        </S.Container >
 
     );
 }
