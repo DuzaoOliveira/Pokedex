@@ -9,7 +9,8 @@ padding: 0;
 width: 100%;
 
 @media screen and (max-width: 600px) {
-background-image: url(none);
+background-image: url(https://i0.wp.com/www.multarte.com.br/wp-content/uploads/2019/03/pikachu.png?resize=290%2C292&ssl=1);
+padding: 150px;
 }
 `
 export const InputButt = styled.div`

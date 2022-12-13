@@ -33,7 +33,6 @@ height: 90px;
 height: 150px;
 font-size: 30px;
 }
-
 `
 
 export const Voltar = styled.button`
@@ -65,9 +64,7 @@ padding: 15px;
 @media screen and (max-width: 600px) {
 font-size: 40px;
 padding: 30px;
-
 }
-
 `
 
 export const ImagemNomes = styled.div`
@@ -84,7 +81,6 @@ width: 450px;
 height: 600px;
 margin-left: 450px;
 }
-
 `
 
 

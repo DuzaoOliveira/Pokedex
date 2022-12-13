@@ -15,10 +15,4 @@ export const GlobalStyle = createGlobalStyle`
   width: 100%;
   font-style: oblique;
   background:#d30603;
-
-  @media screen and (max-width: 600px) {
-    
-  }
-
- }
-`
+}`
