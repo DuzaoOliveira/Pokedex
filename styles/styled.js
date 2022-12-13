@@ -9,13 +9,19 @@ padding: 0;
 width: 100%;
 
 @media screen and (max-width: 600px) {
-background-image: url(https://papeldeparede.club/wp-content/uploads/2019/02/Pokemon-5.jpg);
-
+background-image: url(none);
 }
 `
 export const InputButt = styled.div`
 display: flex;
 justify-content: center;
+font-size: 70px;
+
+@media screen and (max-width: 600px) {
+margin-left:17px;
+
+}
+
 `
 
 export const BotaoB = styled.button`
@@ -26,6 +32,14 @@ padding: 5px;
 border-radius: 0px 10px 0px 0px;
 background: #fdcb08;
 margin-top: 340px;
+
+@media screen and (max-width: 600px) {
+  width: 150px;
+  height: 60px;
+  font-size: 40px;
+  margin-top: 150px;
+}
+
 `
 
 export const InputI = styled.input`
@@ -39,6 +53,14 @@ border-radius: 10px 0px 0px 0px;
 background: #d5dcd6;
 color: #111315;
 margin-top: 340px;
+
+@media screen and (max-width: 600px) {
+width: 400px;
+height: 60px;
+font-size: 35px;
+margin-top: 150px;
+}
+
 `
 
 export const All = styled.button`
@@ -50,4 +72,14 @@ height: 36px;
 border-radius: 0px 0px 10px 10px;
 background: #314545;
 color: #fff;
+
+@media screen and (max-width: 600px) {
+width: 551px;
+height: 80px;
+font-size: 40px;
+margin-top: 0px;
+margin-top: 210px;
+margin-left: -550px;
+}
+
 `
