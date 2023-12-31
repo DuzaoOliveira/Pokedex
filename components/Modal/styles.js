@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
 margin: 0;
+display: flex;
+justify-content: center;
 `
 
 export const Modal = styled.div`
@@ -9,8 +11,6 @@ display: flex;
 position: fixed;
 background: black;
 width: 696px;
-margin-left: 600px;
-margin-top: 150px;
 border-radius: 100px;
 color: white;
 
@@ -36,6 +36,7 @@ margin-top: 97px;
 export const But = styled.div`
 margin-left: 628px;
 margin-top: 33px;
+cursor: pointer;
 
 @media screen and (max-width: 600px) {
 margin-top: 43px;

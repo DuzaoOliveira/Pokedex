@@ -17,6 +17,7 @@ export const InputButt = styled.div`
 display: flex;
 justify-content: center;
 font-size: 70px;
+width: 100%;
 
 @media screen and (max-width: 600px) {
 margin-left:17px;
